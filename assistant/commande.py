@@ -62,17 +62,18 @@ def executer_commande(commande):
     elif "whatsapp" in commande:
         return envoyer_message_whatsapp()
 
-    elif 'axel' in commande or 'conversation' in commande or 'converser' in commande:
+    elif 'stop' in commande:
+        parler("D'accord, je m'arrête.")
+        exit()
+
+    else:
         while True:
+            parler("commençons la conversation")
             message = ecouter(5)
             parler(repondre_conversation(message))
             if 'stop conversation' in commande:
                 break
-    elif 'stop' in commande:
-        parler("D'accord, je m'arrête.")
 
-    else:
-        parler("Je n'ai pas cette commande.")
 
     parler("Appelez moi si vous avez besoin de quelques choses")
     attente_assitante()

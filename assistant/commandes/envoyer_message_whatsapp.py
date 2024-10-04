@@ -18,7 +18,7 @@ def envoyer_message_whatsapp():
         else:
             parler("Dite moi le numéro de téléphone WhatsApp sur lequel vous voulez envoyer le message.")
             telephone = ecouter(7)
-            demander_confirmation("le numero")
+            demander_confirmation(telephone)
             numero = f"+225{telephone}"  # Numéro au format international
             numero_sans_espace = numero.replace(" ", "")
 
@@ -30,10 +30,10 @@ def envoyer_message_whatsapp():
             # Demander l'heure et les minutes pour la programmation
             parler("Dites l'heure à laquelle vous voulez envoyer le message.")
             heure = int(ecouter(2))  # Écoute l'heure
-            demander_confirmation("l'heure")
+            demander_confirmation(str(heure) +" heures")
             parler("Dites la minutes de l'heure à laquelle vous voulez envoyer le message..")
-            demander_confirmation("le nombre de minute")
             minute = int(ecouter(2))  # Écoute les minutes
+            demander_confirmation(str(minute)+" minutes")
         else:
             # Utiliser l'heure et la minute actuelles pour l'envoi immédiat
             heure = datetime.datetime.now().hour

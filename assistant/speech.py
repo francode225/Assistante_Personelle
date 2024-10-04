@@ -14,11 +14,11 @@ def parler(texte):
 
 
 
-# Liste des microphones disponibles
+""" Liste des microphones disponibles
 print("Microphones disponibles :")
 microphones = sr.Microphone.list_microphone_names()
 for i, microphone_name in enumerate(microphones):
-    print(f"{i}: {microphone_name}")
+    print(f"{i}: {microphone_name}") """
 
 # Remplacez "3" par l'index correct que vous obtiendrez après avoir listé les microphones
 def ecouter(temps_phrase: int):

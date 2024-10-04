@@ -24,9 +24,29 @@ Avant de commencer, assurez-vous d'avoir installé les logiciels suivants sur vo
 - [Python 3.x](https://www.python.org/downloads/)
 - Pip (installé avec Python)
 - Un microphone et une caméra pour les fonctions vocales et faciales
+- - Les bibliothèques Python suivantes (à installer via `pip`):
+  - `opencv-python`
+  - `face-recognition`
+  - `speech_recognition`
+  - `pyttsx3`
+  - `smtplib`
+  - `imaplib`
+  - `requests`
+  - `textblob`
+  - `plyer`
+  - `deepface`
+  - `googletrans`
+  - `openai`
 
 ## Installation
 
 1. Clonez ce dépôt sur votre machine locale :
    ```bash
-   git clone https://github.com/ton-utilisateur/assistant-personnel-python.git
+   git clone https://github.com/ton-utilisateur/assistant-personnel-python.
+
+2. Installez-les en exécutant cette commande dans votre terminal :
+```bash
+pip install opencv-python face-recognition speechrecognition pyttsx3 smtplib imaplib requests textblob plyer deepface googletrans openai
+
+
+
